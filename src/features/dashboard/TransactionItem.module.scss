@@ -1,0 +1,101 @@
+.root {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  gap: 1rem;
+  min-height: 72px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .details-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .primary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  .counterparty {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    margin-right: 1rem;
+  }
+
+  .amount {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+    flex-shrink: 0;
+
+    &--negative {
+      color: #f44336;
+    }
+
+    &--positive {
+      color: #4caf50;
+    }
+  }
+
+  .secondary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #777;
+  }
+
+  .message {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    margin-right: 1rem;
+  }
+
+  .date {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .menu {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #999;
+    cursor: pointer;
+    padding: 4px 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}

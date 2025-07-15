@@ -1,0 +1,58 @@
+.root {
+  background: var(--white);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--gray-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  z-index: var(--z-index-header);
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      .icon {
+        background: var(--gray-1);
+      }
+
+      .name {
+        color: var(--gray-5);
+      }
+    }
+  }
+
+  .icon {
+    width: 2rem;
+    height: 2rem;
+    background: var(--gray-2);
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: 0.3s;
+  }
+
+  .name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-6);
+  }
+
+  .avatar {
+    cursor: pointer;
+  }
+}

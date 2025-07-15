@@ -1,0 +1,28 @@
+:root {
+  /* Primary Theme Colors */
+  --primary: #3682ff; /* Primary blue – buttons, highlights */
+  --primary-dark: #1e5ed7;
+  --primary-light: #a9cfff;
+
+  --secondary: #36d48f; /* Secondary green – success, accent */
+  --secondary-dark: #27ae73;
+  --secondary-light: #b7f4d6;
+
+  /* Neutral Grays */
+  --gray-1: #f8f9fa; /* Background, subtle sections */
+  --gray-2: #e9ecef; /* Light border/background */
+  --gray-3: #dee2e6; /* Input borders, separators */
+  --gray-4: #adb5bd; /* Icons, labels, muted text */
+  --gray-5: #495057; /* Main body text */
+  --gray-6: #22211f; /* Headings, high contrast */
+
+  /* Status Colors */
+  --error: #e74c3c; /* Red – destructive actions, errors */
+  --warning: #f39c12; /* Orange – warnings */
+  --success: #2ecc71; /* Green – confirmations */
+  --info: #3498db; /* Light blue – notifications */
+
+  /* White/Black */
+  --white: #ffffff;
+  --black: #000000;
+}
