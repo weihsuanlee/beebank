@@ -200,6 +200,7 @@ const TransactionFormDialog: React.FC<TransactionFormDialogProps> = ({
             render={({ field }) => (
               <TextField
                 {...field}
+                className={cx("date-input")}
                 label="Transaction Date"
                 type="date"
                 fullWidth
