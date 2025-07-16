@@ -135,14 +135,8 @@ const TransactionList = ({ accountId, initialTransactions, accounts }: Transacti
     <div className={cx("root")}>
       <div className={cx("header")}>
         <div className={cx("transactions-actions")}>
-          <Button
-            color="secondary"
-            variant="outlined"
-            aria-label="filter transaction"
-            startIcon={<FilterAltOutlined />}
-            onClick={toggleFilters}
-          >
-            Filters
+          <Button color="secondary" variant="outlined" aria-label="filter transaction" onClick={toggleFilters}>
+            <FilterAltOutlined fontSize="small" />
           </Button>
           <AddTransactionBtn accounts={accounts} />
         </div>
