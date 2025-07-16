@@ -200,7 +200,6 @@ const TransactionFormDialog: React.FC<TransactionFormDialogProps> = ({
             render={({ field }) => (
               <TextField
                 {...field}
-                className={cx("date-input")}
                 label="Transaction Date"
                 type="date"
                 fullWidth
@@ -208,6 +207,9 @@ const TransactionFormDialog: React.FC<TransactionFormDialogProps> = ({
                 slotProps={{
                   inputLabel: {
                     shrink: true,
+                  },
+                  input: {
+                    className: cx("date-input"),
                   },
                 }}
                 error={!!errors.date}
