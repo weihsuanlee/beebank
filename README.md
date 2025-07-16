@@ -4,6 +4,20 @@ A modern banking web application built with **Next.js 15**, **TypeScript**, and 
 
 ---
 
+## 🔗 Live Demo
+
+🌐 **Frontend**: [https://beebank.vercel.app](https://beebank.vercel.app)  
+
+🔐 **Test Login**:
+
+```bash
+
+Email:    test@example.com
+
+Password: password123
+```
+
+
 ## 🎯 Project Approach
 
 ### Frontend Architecture 🚀
