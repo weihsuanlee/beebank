@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 export async function serverLogin(identifier: string, password: string) {
   const cookieStore = await cookies();
   try {
-    const response = await strapiApi.login(identifier, password); // This call runs on the server!
+    const response = await strapiApi.login(identifier, password);
 
     cookieStore.set("strapi-jwt", response.jwt, {
       httpOnly: true,
@@ -28,7 +28,7 @@ export async function serverRegister(username: string, email: string, password: 
   const cookieStore = await cookies();
 
   try {
-    const response = await strapiApi.register(username, email, password); // This call runs on the server!
+    const response = await strapiApi.register(username, email, password);
 
     cookieStore.set("strapi-jwt", response.jwt, {
       httpOnly: true,

@@ -6,6 +6,7 @@ import AuthProvider from "@/contexts/AuthProvider/AuthProvider";
 import MUIThemeProvider from "@/contexts/MUIThemeProvider/MUIThemeProvider";
 import { getAuthToken } from "@/lib/authUtils";
 import { StrapiUser, strapiApi } from "@/lib/strapi";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
 export const metadata: Metadata = {
   title: "BeeBank",
@@ -15,7 +16,6 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  userScalable: false,
 };
 
 export default async function RootLayout({
@@ -38,9 +38,11 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={noto_sans.className}>
-        <MUIThemeProvider>
-          <AuthProvider initialUser={initialUser}>{children}</AuthProvider>
-        </MUIThemeProvider>
+        <AppRouterCacheProvider>
+          <MUIThemeProvider>
+            <AuthProvider initialUser={initialUser}>{children}</AuthProvider>
+          </MUIThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

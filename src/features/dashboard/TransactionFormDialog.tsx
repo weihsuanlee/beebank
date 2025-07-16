@@ -108,7 +108,7 @@ const TransactionFormDialog: React.FC<TransactionFormDialogProps> = ({
         <form onSubmit={handleFormSubmit}>
           {/* Sender Dropdown */}
           <Controller
-            name="senderAccount" // Updated name
+            name="senderAccount"
             control={control}
             rules={{ required: "Sender account is required" }}
             render={({ field }) => (
@@ -136,10 +136,9 @@ const TransactionFormDialog: React.FC<TransactionFormDialogProps> = ({
               </TextField>
             )}
           />
-
           {/* Receiver Dropdown */}
           <Controller
-            name="receiverAccount" // Updated name
+            name="receiverAccount"
             control={control}
             rules={{ required: "Receiver account is required" }}
             render={({ field }) => (
@@ -167,7 +166,6 @@ const TransactionFormDialog: React.FC<TransactionFormDialogProps> = ({
               </TextField>
             )}
           />
-
           {/* Transaction Amount */}
           <Controller
             name="amount"
@@ -192,7 +190,7 @@ const TransactionFormDialog: React.FC<TransactionFormDialogProps> = ({
               />
             )}
           />
-          {/* Transaction Date (Simple TextField with type="date") */}
+          {/* Transaction Date */}
           <Controller
             name="date"
             control={control}
@@ -218,7 +216,6 @@ const TransactionFormDialog: React.FC<TransactionFormDialogProps> = ({
               />
             )}
           />
-
           {/* Transaction Message */}
           <Controller
             name="message"
@@ -238,7 +235,6 @@ const TransactionFormDialog: React.FC<TransactionFormDialogProps> = ({
               />
             )}
           />
-
           {submitError && (
             <Typography color="error" className={cx("error-message")}>
               {submitError}
