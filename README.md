@@ -193,12 +193,12 @@ beebank/
 ## ⏱️ Time Breakdown
 
 - **Strapi Setup & Configuration**: 1 hour ⚙️
-- **Frontend Development**: 2.5 hours 💻
-  - Project setup: 0.5 hour
+- **Frontend Development**: 3.5 hours 💻
+  - Project setup: 1 hour
   - Authentication integration: 0.5 hour
-  - UI components & design: 1.5 hours
-- **README Documentation**: 20 minutes 📄
-- **Total**: \~4 hours ⏰
+  - UI components & design: 2.5 hours
+- **README Documentation**: 30 minutes 📄
+- **Total**: \~5.5 hours ⏰
 
 ---
 
