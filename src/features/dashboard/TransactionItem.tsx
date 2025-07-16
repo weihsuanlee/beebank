@@ -1,4 +1,8 @@
-import { ArrowOutward, CallReceived } from "@mui/icons-material"; // Keep using MUI icons
+"use client";
+
+import { useState } from "react";
+import { ArrowOutward, CallReceived } from "@mui/icons-material";
+import TransactionDetailDialog from "./TransactionDetailDialog";
 
 import classNames from "classnames/bind";
 import style from "./TransactionItem.module.scss";
@@ -17,6 +21,7 @@ export interface ITransaction {
 
 const TransactionItem = ({ transaction }: { transaction: ITransaction }) => {
   const counterparty = transaction.type === "debit" ? transaction.receiver : transaction.sender;
+  const [isDetailDialogOpen, setIsDetailDialogOpen] = useState(false);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -46,6 +51,14 @@ const TransactionItem = ({ transaction }: { transaction: ITransaction }) => {
 
   const formattedAmount = `${transaction.type === "debit" ? "-" : "+"}$${Math.abs(transaction.amount).toFixed(2)}`;
 
+  const handleOpenDetailDialog = () => {
+    setIsDetailDialogOpen(true);
+  };
+
+  const handleCloseDetailDialog = () => {
+    setIsDetailDialogOpen(false);
+  };
+
   return (
     <div className={cx("root")}>
       <div className={cx("icon-wrapper")} style={{ backgroundColor: getTransactionColor(transaction.type) }}>
@@ -68,7 +81,10 @@ const TransactionItem = ({ transaction }: { transaction: ITransaction }) => {
           <span className={cx("date")}>{formatDate(transaction.date)}</span>
         </div>
       </div>
-      <button className={cx("menu")}>⋮</button>
+      <button onClick={handleOpenDetailDialog} aria-label="View transaction details" className={cx("menu")}>
+        ⋮
+      </button>
+      <TransactionDetailDialog transaction={transaction} open={isDetailDialogOpen} onClose={handleCloseDetailDialog} />
     </div>
   );
 };

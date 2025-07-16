@@ -126,6 +126,7 @@ beebank/
 - **Flexible transaction filtering** by date range, amount range, and categories (future enhancement).
 - **Infinite scroll pagination** provides smooth, performant loading of transaction data.
 - **"Load more" pagination** offers an additional, user-controlled method for Browse extensive history.
+- **Transaction Detail Dialog** View complete transaction details, including full messages and other information, via a dedicated dialog for items that might be truncated in the list view.
 
 ---
 

@@ -1,7 +1,8 @@
+import { IAccount } from "@/types/account";
+import Chip from "@/components/Chip/Chip";
+
 import classNames from "classnames/bind";
 import styles from "./AccountCard.module.scss";
-import { IAccount } from "@/types/account";
-
 const cx = classNames.bind(styles);
 
 type AccountCardProps = {
@@ -52,7 +53,7 @@ const AccountCard = ({ account, selected = false, onClick }: AccountCardProps) =
     >
       <div className={cx("header")}>
         <div className={cx("icon")}>{config.icon}</div>
-        <span className={cx("chip")}>{config.shortName}</span>
+        <Chip className={cx('chip')}>{config.shortName}</Chip>
       </div>
       <h4>{config.title}</h4>
       <p className={cx("number")}>{account.accountNumber}</p>
