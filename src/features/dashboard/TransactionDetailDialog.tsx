@@ -1,13 +1,4 @@
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Typography,
-  Button,
-  Divider,
-  Box,
-} from "@mui/material";
+import { Dialog, DialogTitle, DialogContent, DialogActions, Typography, Button, Divider, Box } from "@mui/material";
 import { CallReceived, ArrowOutward } from "@mui/icons-material";
 import { ITransaction } from "@/types/account";
 import Chip from "@/components/Chip/Chip";
@@ -58,15 +49,21 @@ const TransactionDetailDialog = ({ transaction, open, onClose }: TransactionDeta
       <DialogTitle id="transaction-detail-dialog-title" className={cx("header")}>
         <div>{getTransactionIcon(transaction.type)}</div>
         <div>
-          <Typography variant="h6" component="span">Transaction Details</Typography>
-          <Typography variant="body2" color="text.secondary">{formatDate(transaction.date)}</Typography>
+          <Typography variant="h6" component="span">
+            Transaction Details
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {formatDate(transaction.date)}
+          </Typography>
         </div>
       </DialogTitle>
 
       <DialogContent dividers>
         <Box className={cx("amount-section")}>
-          <Typography variant="body2" color="text.secondary">Amount</Typography>
-          <Typography variant="h3" className={cx("amount-value")} style={{ color: amountColor }}>
+          <Typography variant="body2" color="text.secondary">
+            Amount
+          </Typography>
+          <Typography variant="h4" className={cx("amount-value")} style={{ color: amountColor }}>
             {formattedAmount}
           </Typography>
           <Chip className={cx("chip", transaction.type)}>{`${transaction.type} Transaction`}</Chip>
@@ -76,26 +73,42 @@ const TransactionDetailDialog = ({ transaction, open, onClose }: TransactionDeta
 
         <Box className={cx("details-grid")}>
           <div className={cx("detail-item")}>
-            <Typography variant="body2" color="text.secondary">From</Typography>
-            <Typography variant="body1" className={cx("detail-value")}>{transaction.sender}</Typography>
+            <Typography variant="body2" color="text.secondary">
+              From
+            </Typography>
+            <Typography variant="body1" className={cx("detail-value")}>
+              {transaction.sender}
+            </Typography>
           </div>
           <div className={cx("detail-item")}>
-            <Typography variant="body2" color="text.secondary">To</Typography>
-            <Typography variant="body1" className={cx("detail-value")}>{transaction.receiver}</Typography>
+            <Typography variant="body2" color="text.secondary">
+              To
+            </Typography>
+            <Typography variant="body1" className={cx("detail-value")}>
+              {transaction.receiver}
+            </Typography>
           </div>
           <div className={cx("detail-item")}>
-            <Typography variant="body2" color="text.secondary">Transaction ID</Typography>
-            <Typography variant="body2" className={cx("detail-value", "mono")}>{transaction.id}</Typography>
+            <Typography variant="body2" color="text.secondary">
+              Transaction ID
+            </Typography>
+            <Typography variant="body2" className={cx("detail-value", "mono")}>
+              {transaction.id}
+            </Typography>
           </div>
           <div className={cx("detail-item")}>
-            <Typography variant="body2" color="text.secondary">Status</Typography>
+            <Typography variant="body2" color="text.secondary">
+              Status
+            </Typography>
             <Chip className={cx("chip", "status")}>Completed</Chip>
           </div>
         </Box>
 
         {transaction.message && (
           <Box className={cx("message-section")}>
-            <Typography variant="body2" color="text.secondary" className={cx("message-label")}>Message</Typography>
+            <Typography variant="body2" color="text.secondary" className={cx("message-label")}>
+              Message
+            </Typography>
             <Box className={cx("message-box")}>
               <Typography variant="body2">{transaction.message}</Typography>
             </Box>
